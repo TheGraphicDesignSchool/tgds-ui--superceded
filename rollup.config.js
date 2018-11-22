@@ -1,20 +1,24 @@
 import {uglify} from 'rollup-plugin-uglify'
 import babel from 'rollup-plugin-babel'
+import resolve from 'rollup-plugin-node-resolve';
+import commonjs from 'rollup-plugin-commonjs';
 
-const config = {
+export default {
     input: './src/index.js',
+    moduleName: 'TgdsUi',
     external: ['react'],
     plugins: [
         babel({
             exclude: "node_modules/**"
         }),
-        uglify()
+        resolve(),
+        commonjs()
     ],
     output: {
-        format: 'esm',
+        format: 'umd',
+        file: './index.js',
         globals: {
             react: "React"
         }
     }
 }
-export default config
