@@ -1,0 +1,23 @@
+{
+  "name": "tgds-ui",
+  "version": "1.0.0",
+  "description": "TGDS UI Components Library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheGraphicDesignSchool/tgds-ui.git"
+  },
+  "keywords": [],
+  "author": "Jean-Marc Giorgi <jmgiorgi@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheGraphicDesignSchool/tgds-ui/issues"
+  },
+  "homepage": "https://github.com/TheGraphicDesignSchool/tgds-ui#readme",
+  "devDependencies": {
+    "react": "^16.6.3"
+  }
+}
