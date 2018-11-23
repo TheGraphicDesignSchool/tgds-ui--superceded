@@ -1,9 +1,10 @@
-import { css } from 'styled-components';
-import remcalc from 'remcalc';
+import { createGlobalStyle } from 'styled-components';
+import remcalc from '../utils/remcalc';
 
-export default ({ theme }) => css`
-  @import url('${theme.font.href()}');
-  @import url('${theme.monoFont.href()}');
+// @import url('${theme.font.href()}');
+// @import url('${theme.monoFont.href()}');
+
+export default ({ theme }) => createGlobalStyle`
 
   [hidden] {
     display: none;

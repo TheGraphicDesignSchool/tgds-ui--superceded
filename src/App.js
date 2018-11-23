@@ -1,20 +1,17 @@
 import React, { Component } from 'react';
 
 import {RootContainer} from '../src/lib/layout'
+import {DefaultTheme as theme} from '../src/lib/theme'
 
 import {Cog} from '../src/lib/icons'
 
-class App extends Component {
-  render() {
+export default () => {
     return (
-      <RootContainer theme={{ color: 'blue'}}>
-        <header className="App-header">
-          <Cog color='blue' />
-        </header>
-      </RootContainer>
+        <RootContainer theme={theme}>
+            <header className="App-header">
+                <Cog color={theme.color} size={120} />
+            </header>
+        </RootContainer>
     );
-  }
 }
-
-export default App;
 

@@ -1,21 +1,15 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { ThemeProvider } from 'styled-components';
 
-// import global from '../base';
-
-// const GlobalStyle = createGlobalStyle`
-//   ${global({ theme })};
-// `
+import GlobalStyle from '../base/global';
 
 export default props => {
-
-    // useEffect( () => {
-    //     const { theme = {} } = props;
-    // }, [])
-
     return (
         <ThemeProvider theme={props.theme}>
-            {props.children}
+            <GlobalStyle theme={props.theme}>
+
+                {props.children}
+            </GlobalStyle>
         </ThemeProvider>
     )
 }
