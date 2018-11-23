@@ -4,3 +4,4 @@ test/
 .npmignore
 .babelrc
 rollup.config.js
+yarn.lock
