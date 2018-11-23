@@ -1,8 +1,5 @@
-import React from 'react'
+import RootContainer from './layouts/root-container'
 
-export RootContainer from './layouts/root-container'
-export const Tesst = () => (
-    <div>
-        Tesst
-    </div>
-)
+export {
+    RootContainer
+}

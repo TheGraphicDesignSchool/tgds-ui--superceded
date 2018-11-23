@@ -1,23 +1,46 @@
-export _IconBase from './components/icons/_IconBase'
+import _IconBase from './components/icons/_IconBase'
 
-export ArrowLeft from './components/icons/ArrowLeft'
-export ArrowRight from './components/icons/ArrowRight'
-export Bell from './components/icons/Bell'
-export Calendar from './components/icons/Calendar'
-export Cog from './components/icons/Cog'
-export Cogs from './components/icons/Cogs'
-export Cross from './components/icons/Cross'
-export Desktop from './components/icons/Desktop'
-export Envelope from './components/icons/Envelope'
-export Expand from './components/icons/Expand'
-export File from './components/icons/File'
-export Pdf from './components/icons/Pdf'
-export Pen from './components/icons/Pen'
-export Phone from './components/icons/Phone'
-export School from './components/icons/School'
-export Spinner from './components/icons/Spinner'
-export Sync from './components/icons/Sync'
-export Tgds from './components/icons/Tgds'
-export Trash from './components/icons/Trash'
-export User from './components/icons/User'
+import ArrowLeft from './components/icons/ArrowLeft'
+import ArrowRight from './components/icons/ArrowRight'
+import Bell from './components/icons/Bell'
+import Calendar from './components/icons/Calendar'
+import Cog from './components/icons/Cog'
+import Cogs from './components/icons/Cogs'
+import Cross from './components/icons/Cross'
+import Desktop from './components/icons/Desktop'
+import Envelope from './components/icons/Envelope'
+import Expand from './components/icons/Expand'
+import File from './components/icons/File'
+import Pdf from './components/icons/Pdf'
+import Pen from './components/icons/Pen'
+import Phone from './components/icons/Phone'
+import School from './components/icons/School'
+import Spinner from './components/icons/Spinner'
+import Sync from './components/icons/Sync'
+import Tgds from './components/icons/Tgds'
+import Trash from './components/icons/Trash'
+import User from './components/icons/User'
+
+export {
+    _IconBase,
+    ArrowLeft,
+    ArrowRight,
+    Bell,
+    Cog,
+    Cogs,
+    Cross,
+    Desktop,
+    Envelope,
+    Expand,
+    File,
+    Pdf,
+    Pen,
+    Phone,
+    School,
+    Spinner,
+    Sync,
+    Tgds,
+    Trash,
+    User
+}
 

@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
-import './App.css';
+
+import {RootContainer} from '../src/lib/layout'
 
 import {Cog} from '../src/lib/icons'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <RootContainer theme={{ color: 'blue'}}>
         <header className="App-header">
-          <Cog color='white' />
+          <Cog color='blue' />
         </header>
-      </div>
+      </RootContainer>
     );
   }
 }
