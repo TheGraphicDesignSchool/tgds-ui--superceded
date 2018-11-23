@@ -26,6 +26,7 @@ export {
     ArrowLeft,
     ArrowRight,
     Bell,
+    Calendar,
     Cog,
     Cogs,
     Cross,

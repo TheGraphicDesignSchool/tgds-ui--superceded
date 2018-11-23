@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import global from './global';
 
 export default styled.div`
   font-size: 1rem;
@@ -7,5 +6,3 @@ export default styled.div`
   background-color: ${props => props.theme.background};
   color: ${props => props.theme.text};
 `;
-
-export { global };

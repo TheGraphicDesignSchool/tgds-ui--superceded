@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import {RootContainer} from '../src/lib/layout'
 import {DefaultTheme as theme} from '../src/lib/theme'
