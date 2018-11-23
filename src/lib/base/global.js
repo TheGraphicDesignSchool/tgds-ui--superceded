@@ -27,12 +27,11 @@ export default ({ theme }) => css`
     padding: 0;
     background: ${theme.background};
     color: ${theme.text};
+    text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
   }
 
-  html,
-  body,
-  #root {
+  html, body, #root {
     min-height: calc(100vh - ${remcalc(48)});
   }
 
@@ -49,4 +48,5 @@ export default ({ theme }) => css`
     margin: 0;
   }
 
+  //* { outline: 1px solid rgba(0, 0, 0, 0.1); }
 `;
