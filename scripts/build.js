@@ -4,14 +4,14 @@ const
     glob = require('glob'),
     rollup = require('rollup'),
     babel = require('rollup-plugin-babel'),
-    resolve = require('rollup-plugin-node-resolve'),
-    commonjs = require('rollup-plugin-commonjs'),
-    {terser} = require('rollup-plugin-terser'); // more modern -- support es6
+    resolve = require('rollup-plugin-node-resolve')
+    // commonjs = require('rollup-plugin-commonjs'),
+    // {terser} = require('rollup-plugin-terser'); // more modern than uglify -- support es6
 
 const log = console.log
 
 const
-    source_dir = path.join(__dirname,'../src'),
+    source_dir = path.join(__dirname,'../src/lib'),
     dist_dir = path.join(__dirname,'../dist')
 
 
@@ -41,20 +41,20 @@ const rollupFile = file => {
         babel({
             exclude: "node_modules/**"
         }),
-        resolve(),
-        commonjs()
+        resolve()
     ]
 
     return rollup.rollup({
         input: file,
-        external: ['react'],
+        external: ['react','styled-components'],
         plugins: configPlugins
     }).then( bundle => {
         return bundle.write({
             file: dest,
             format: 'es',
             globals: {
-                react: 'React'
+                react: 'React',
+                'styled-components': 'styled'
             }
         })
     }).catch( e => {

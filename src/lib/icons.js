@@ -20,3 +20,4 @@ export Sync from './components/icons/Sync'
 export Tgds from './components/icons/Tgds'
 export Trash from './components/icons/Trash'
 export User from './components/icons/User'
+
