@@ -14,16 +14,28 @@ const
     source_dir = path.join(__dirname,'../src'),
     dist_dir = path.join(__dirname,'../dist')
 
+
 glob( path.join(source_dir,'*.js'), {}, (er,files) => {
-    files.forEach( file => rollupFile(file))
+    let promises = []
+
+    files.forEach( file => promises.push(rollupFile(file)))
+
+    Promise.all(promises).then( () => {
+        log('->', promises.length, 'files rolled-up');
+        resolve()
+    })
 })
 
-const rollupFile = async file => {
+
+
+// -- rollup one file
+
+const rollupFile = file => {
     const
         base = path.basename(file,'.js'),
         dest = path.join(__dirname,'../dist',base,'index.js')
 
-    log(base,dest)
+    log(chalk.grey('* rolling'),base)
 
     const configPlugins = [
         babel({
@@ -33,17 +45,19 @@ const rollupFile = async file => {
         commonjs()
     ]
 
-    const bundle = await rollup.rollup({
+    return rollup.rollup({
         input: file,
         external: ['react'],
         plugins: configPlugins
-    })
-
-    return bundle.write({
-        file: dest,
-        format: 'es',
-        globals: {
-            react: 'React'
-        }
+    }).then( bundle => {
+        return bundle.write({
+            file: dest,
+            format: 'es',
+            globals: {
+                react: 'React'
+            }
+        })
+    }).catch( e => {
+        log( chalk.red(e.message));
     })
 }
