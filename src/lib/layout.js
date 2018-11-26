@@ -1,9 +1,10 @@
 import RootContainer from './layouts/root-container'
-import PageContainer, {Box} from './layouts/page-container'
+import PageContainer from './layouts/page-container'
+import {CBox} from "./layouts/containers";
 import SplitGrid from './layouts/split-grid'
 
 export {
-    Box,
+    CBox,
     RootContainer,
     PageContainer,
     SplitGrid

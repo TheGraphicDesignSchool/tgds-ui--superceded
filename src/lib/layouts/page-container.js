@@ -1,14 +1,8 @@
 import styled from 'styled-components';
 import remcalc from '../utils/remcalc';
 import React from 'react'
+import {CBox} from "./containers";
 
-export const Box = styled.div`
-  flex: 1 1 auto;
-  position: relative;
-`
-
-export default styled(Box)`
-  display: flex;
-  flex-flow: column;
+export default styled(CBox)`
   padding-bottom: ${remcalc(60)};
 `;

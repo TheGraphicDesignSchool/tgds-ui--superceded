@@ -46,14 +46,18 @@ const rollupFile = file => {
 
     return rollup.rollup({
         input: file,
-        external: ['react','styled-components'],
+        external: [
+            'react',
+            'styled-components',
+            'react-splitter-layout2',
+        ],
         plugins: configPlugins
     }).then( bundle => {
         return bundle.write({
             file: dest,
             format: 'es',
             globals: {
-                react: 'React',
+                'react': 'React',
                 'styled-components': 'styled'
             }
         })
