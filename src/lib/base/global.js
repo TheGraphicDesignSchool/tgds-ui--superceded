@@ -19,6 +19,8 @@ export default ({ theme }) => css`
   html {
     line-height: 1.15;
     text-size-adjust: 100%;
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 
   body {
@@ -29,10 +31,12 @@ export default ({ theme }) => css`
     color: ${theme.text};
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
   }
 
   html, body, #root {
-    min-height: calc(100vh - ${remcalc(48)});
+  //  min-height: calc(100vh - ${remcalc(48)});
+    min-height: 100vh;
   }
 
   #header {
@@ -47,6 +51,6 @@ export default ({ theme }) => css`
   form {
     margin: 0;
   }
-
+  
   //* { outline: 1px solid rgba(0, 0, 0, 0.1); }
 `;

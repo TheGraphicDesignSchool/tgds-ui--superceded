@@ -7,6 +7,14 @@ export const DefaultTheme = {
       families: `SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace`
     },
     background: '#fafafa',
-    color: 'red',
-    text: '#111'
+    color: '#111',
+    text: '#111',
+    link: {
+        color: {
+            base: 'tomato',
+            hover: 'orange',
+            active: 'violet',
+            visited: 'blue'
+        }
+    }
 }

@@ -2,7 +2,12 @@ import React from 'react';
 import { ThemeProvider, createGlobalStyle } from 'styled-components';
 
 import global from '../base/global';
-const GlobalStyle = createGlobalStyle`${global}`
+import reboot from '../base/reboot';
+
+const GlobalStyle = createGlobalStyle`
+  ${global};
+  ${reboot}
+`
 
 export default props => {
     return (
