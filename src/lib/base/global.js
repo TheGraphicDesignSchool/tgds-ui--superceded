@@ -35,7 +35,6 @@ export default ({ theme }) => css`
   }
 
   html, body, #root {
-  //  min-height: calc(100vh - ${remcalc(48)});
     min-height: 100vh;
   }
 

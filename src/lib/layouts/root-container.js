@@ -6,7 +6,7 @@ import reboot from '../base/reboot';
 
 const GlobalStyle = createGlobalStyle`
   ${global};
-  ${reboot}
+  ${reboot};
 `
 
 export default props => {
