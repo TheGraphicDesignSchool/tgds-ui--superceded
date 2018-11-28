@@ -19,7 +19,6 @@ const Body = styled(RBox)`
   background: tomato;
 `
 
-
 const AsideStyle = styled(CBox)`
   flex: 0 0 ${props => props.theme.sidebar.width};
   background: rgba(0,0,0,.1)
@@ -31,7 +30,7 @@ const Aside = props => {
 
 	return (
 		<AsideStyle>
-			<Button onClick={toggleHidden}>Toggle</Button>
+			<Button onClick={toggleHidden}>Toggle ???</Button>
 			{props.children}
 		</AsideStyle>
 	)
@@ -41,14 +40,16 @@ const Aside = props => {
 const NotesStyle = styled(CBox)`
   flex: 0 0 ${props => props.theme.aside.width};
   background: rgba(0,0,0,.1)
+
 `
 
 const Notes = props => {
 	return (
 		<NotesStyle>
-			<Button >Toggle</Button>
+			<Button >Toggle -></Button>
 			{props.children}
 		</NotesStyle>
+
 	)
 }
 
@@ -79,4 +80,3 @@ export default props => {
         </Container>
     )
 }
-
