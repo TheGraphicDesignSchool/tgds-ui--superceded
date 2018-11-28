@@ -32,7 +32,7 @@ export default ({theme}) => css`
 
   abbr[data-original-title] {
       cursor: help;
-      border-bottom: 1px dotted $abbr-border-color;
+      border-bottom: 1px dotted rgba(0,0,0,.1);
   }
   
   address {
@@ -56,7 +56,7 @@ export default ({theme}) => css`
   }
   
   dt {
-      font-weight: $dt-font-weight;
+      font-weight: 400;
   }
   
   dd {

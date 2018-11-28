@@ -5,7 +5,7 @@ const
     rollup = require('rollup'),
     babel = require('rollup-plugin-babel'),
     resolve = require('rollup-plugin-node-resolve')
-    // commonjs = require('rollup-plugin-commonjs'),
+    // commonjs = require('rollup-plugin-commonjs')
     // {terser} = require('rollup-plugin-terser'); // more modern than uglify -- support es6
 
 const log = console.log
@@ -41,7 +41,7 @@ const rollupFile = file => {
         babel({
             exclude: "node_modules/**"
         }),
-        resolve()
+	    resolve()
     ]
 
     return rollup.rollup({

@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default props => {
-    const computedSize = props.size || '1em'
+    const computedSize = props.size || '1rem'
 
     const styleProp = props.style || {
         verticalAlign: 'middle'

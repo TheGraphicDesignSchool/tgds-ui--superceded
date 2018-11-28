@@ -1,7 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
+
 import {CBox,RBox} from "./containers";
 import PageContainer from './page-container'
+
+import {Button} from '../components'
 
 const log = console.log
 
@@ -16,41 +19,64 @@ const Body = styled(RBox)`
   background: tomato;
 `
 
-const Sidebar = styled(CBox)`
+
+const AsideStyle = styled(CBox)`
   flex: 0 0 ${props => props.theme.sidebar.width};
   background: rgba(0,0,0,.1)
 `
 
-const Aside = styled(CBox)`
+const Aside = props => {
+	const [hidden, setHidden] = useState(false)
+	const toggleHidden = () => { setHidden(!hidden) }
+
+	return (
+		<AsideStyle>
+			<Button onClick={toggleHidden}>Toggle</Button>
+			{props.children}
+		</AsideStyle>
+	)
+}
+
+
+const NotesStyle = styled(CBox)`
   flex: 0 0 ${props => props.theme.aside.width};
   background: rgba(0,0,0,.1)
 `
 
+const Notes = props => {
+	return (
+		<NotesStyle>
+			<Button >Toggle</Button>
+			{props.children}
+		</NotesStyle>
+	)
+}
 
 export default props => {
     log(props.theme)
     return (
         <Container>
-            {props.renderHeader && (
+            { props.renderHeader && (
                 <Header theme={props.theme}>
                     {props.renderHeader({theme: props.theme})}
                 </Header>
             )}
             <Body>
-                {props.renderSidebar && (
-                    <Sidebar theme={props.theme}>
+                { props.renderSidebar && (
+                    <Aside theme={props.theme}>
                         {props.renderSidebar({theme: props.theme})}
-                    </Sidebar>
+                    </Aside>
                 )}
                 <PageContainer>
                     {props.children}
                 </PageContainer>
-                {props.renderAside && (
-                    <Aside theme={props.theme}>
-                        {props.renderAside({theme: props.theme})}
-                    </Aside>
+                { props.renderNotes && (
+                    <Notes theme={props.theme}>
+	                    {props.renderNotes({theme: props.theme})}
+                    </Notes>
                 )}
             </Body>
         </Container>
     )
 }
+
