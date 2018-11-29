@@ -7,7 +7,6 @@ import vars from '../vars'
 
 const AsideStyle = styled(CBox)`
 	position: relative;	
-  	background: rgba(0,0,0,.1);
   	transition: all ease-out .3s;
 
  	flex: 0 0 ${vars.aside.width};
@@ -27,7 +26,7 @@ const AsideStyle = styled(CBox)`
   	&:before {
   		content: ' ';
   		position: absolute; top: 0; bottom: 0; width: ${vars.icon.size};
-  		background: rgba(0,0,0,.1);
+  		background: rgba(0,0,0,.05);
   		
 		${props => props.position === 'left' ?
 			`right: 0;` :
@@ -46,7 +45,7 @@ const AsideButton = styled(Button)`
 	width: ${vars.icon.size};
 	height: ${vars.icon.size};
 	
-	background: rgba(0,0,0,.1);
+	background: rgba(0,0,0,.05);
 	
 	${props => props.position === 'left' ?
 		`left: calc(100% - ${vars.icon.size});` :
