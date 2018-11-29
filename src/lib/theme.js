@@ -16,14 +16,5 @@ export const DefaultTheme = {
             active: 'violet',
             visited: 'blue'
         }
-    },
-    header: {
-        height: '10rem'
-    },
-    sidebar: {
-        width: '10rem'
-    },
-    aside: {
-        width: '15rem'
     }
 }

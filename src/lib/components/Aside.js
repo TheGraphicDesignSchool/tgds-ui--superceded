@@ -3,34 +3,54 @@ import {CBox} from "../layouts/containers";
 import Button from "./Button";
 import React, {useState} from "react";
 
+import vars from '../vars'
+
 const AsideStyle = styled(CBox)`
 	position: relative;	
   	background: rgba(0,0,0,.1);
   	transition: all ease-out .3s;
 
- 	flex: 0 0 ${props => props.theme.aside.width};
+ 	flex: 0 0 ${vars.aside.width};
+
+  	padding: ${vars.icon.size} 0 0 ${vars.icon.size};
   	
   	${props => props.isHidden ? (
 		props.position === 'left' ?
-			`margin-left: -${props.theme.aside.width};` :
-			`margin-right: -${props.theme.aside.width};` 
+			`margin-left: -${vars.aside.width};` :
+			`margin-right: -${vars.aside.width};` 
 	):(
 		props.position === 'left' ?
 			`margin-left: 0;` :
 			`margin-right: 0;`
 	)}
+  	
+  	&:before {
+  		content: ' ';
+  		position: absolute; top: 0; bottom: 0; width: ${vars.icon.size};
+  		background: rgba(0,0,0,.1);
+  		
+		${props => props.position === 'left' ?
+			`right: 0;` :
+			`left: 0;`
+  	}
 `
 
 const AsideButton = styled(Button)`
+
 	position: absolute;
-	background: none;
+	top: 0;
+	
 	text-align: center;
-	border: 1px solid white;
 	color: white;
 	
+	width: ${vars.icon.size};
+	height: ${vars.icon.size};
+	
+	background: rgba(0,0,0,.1);
+	
 	${props => props.position === 'left' ?
-		`left: 100%;` :
-		`right: 100%;`
+		`left: calc(100% - ${vars.icon.size});` :
+		`right: calc(100% - ${vars.icon.size});`
 	}
 	
 `
@@ -42,7 +62,10 @@ export default props => {
 
 	return (
 		<AsideStyle isHidden={hidden} {...props} >
-			<AsideButton position={props.position} onClick={toggleHidden}>{hidden ? 'Show' : 'Hide'}</AsideButton>
+			<AsideButton
+				position={props.position}
+				onClick={toggleHidden}>{hidden ? 'S' : 'H'}
+			</AsideButton>
 			{props.children}
 		</AsideStyle>
 	)

@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
+import vars from '../vars'
 
 const StyledButton = styled.div`
 	cursor: pointer;
-	line-height: 2rem;
-	border: 1px solid blue;
+	line-height: ${vars.icon.size};
 `
 
 export default props =>  (

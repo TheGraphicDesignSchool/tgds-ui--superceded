@@ -16,7 +16,6 @@ const Body = styled(RBox)`
 `
 
 export default props => {
-    log(props.theme)
     return (
         <Container>
             { props.renderHeader && (
