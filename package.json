@@ -14,7 +14,8 @@
     "prepublish": "rm -rf ./dist && npm run build",
     "pub": "cd dist && npm publish --access public && cd ..",
     "start-styleguide": "npx styleguidist server",
-    "build-styleguide": "npx styleguidist build"
+    "build-styleguide": "npx styleguidist build",
+    "dev": "node scripts/watch.js"
   },
   "repository": {
     "type": "git",
