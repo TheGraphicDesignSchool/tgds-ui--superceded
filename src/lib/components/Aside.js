@@ -15,8 +15,8 @@ const AsideStyle = styled(CBox)`
   	
   	${props => props.isHidden ? (
 		props.position === 'left' ?
-			`margin-left: -${vars.aside.width};` :
-			`margin-right: -${vars.aside.width};` 
+			`margin-left: calc(${vars.icon.size} - ${vars.aside.width});` :
+			`margin-right: calc(${vars.icon.size} - ${vars.aside.width});` 
 	):(
 		props.position === 'left' ?
 			`margin-left: 0;` :

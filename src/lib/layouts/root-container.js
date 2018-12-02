@@ -3,10 +3,12 @@ import { ThemeProvider, createGlobalStyle } from 'styled-components';
 
 import global from '../base/global';
 import reboot from '../base/reboot';
+import type from '../base/type';
 
 const GlobalStyle = createGlobalStyle`
   ${global};
   ${reboot};
+  ${type};
 `
 
 export default props => {
