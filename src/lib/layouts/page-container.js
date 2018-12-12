@@ -3,6 +3,5 @@ import remcalc from '../utils/remcalc';
 import {CBox} from "./containers";
 
 export default styled(CBox)`
-  // padding-bottom: ${remcalc(60)};
-  //border: 1px solid blue;
+  border-bottom: 5px solid black;
 `;

@@ -6,6 +6,7 @@ import React, {useState} from "react";
 import vars from '../vars'
 
 const AsideStyle = styled(CBox)`
+	test: 'Aside';
 	position: relative;	
   	transition: all ease-out .3s;
   	
