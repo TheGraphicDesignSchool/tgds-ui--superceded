@@ -8,15 +8,15 @@ import vars from '../vars'
 const AsideStyle = styled(CBox)`
 	position: relative;	
   	transition: all ease-out .3s;
-
- 	flex: 0 0 ${vars.aside.width};
+  	
+ 	flex: 0 0 ${props => props.theme.asideWidth ? props.theme.asideWidth : vars.aside.width};
 
   	padding: ${vars.icon.size} 0 0 ${vars.icon.size};
   	
   	${props => props.isHidden ? (
 		props.position === 'left' ?
-			`margin-left: calc(${vars.icon.size} - ${vars.aside.width});` :
-			`margin-right: calc(${vars.icon.size} - ${vars.aside.width});` 
+			`margin-left: calc(${vars.icon.size} - ${props.theme.asideWidth ? props.theme.asideWidth : vars.aside.width});` :
+			`margin-right: calc(${vars.icon.size} - ${props.theme.asideWidth ? props.theme.asideWidth : vars.aside.width});` 
 	):(
 		props.position === 'left' ?
 			`margin-left: 0;` :
@@ -57,13 +57,13 @@ const AsideButton = styled(Button)`
 
 export default props => {
 
-	const [hidden, setHidden] = useState(false)
+	const [hidden, setHidden] = useState(props.theme.asideHidden || false)
 	const toggleHidden = () => { setHidden(!hidden) }
 
 	return (
 		<AsideStyle isHidden={hidden} {...props} >
 			<AsideButton
-				position={props.position}
+				{...props}
 				onClick={toggleHidden}>{hidden ? 'S' : 'H'}
 			</AsideButton>
 			{props.children}

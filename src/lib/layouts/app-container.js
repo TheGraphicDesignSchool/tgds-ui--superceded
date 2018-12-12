@@ -33,7 +33,7 @@ export default props => {
                     {props.children}
                 </PageContainer>
                 { props.renderNotes && (
-                    <Aside theme={props.theme} position='right'>
+                    <Aside theme={props.theme} position='right' initiallyHidden={props.asideHidden}>
 	                    {props.renderNotes({theme: props.theme})}
                     </Aside>
                 )}
