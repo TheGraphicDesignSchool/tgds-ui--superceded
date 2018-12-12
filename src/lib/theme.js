@@ -29,7 +29,7 @@ export const AdminTheme = {
     },
     background: '#fafafa',
     color: 'tomato',
-    text: 'tomato',
+    text: 'black',
     link: {
         color: {
             base: 'tomato',

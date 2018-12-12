@@ -377,5 +377,17 @@ export default ({theme}) => css`
   input[type='search'] {
     -webkit-appearance: none;
   }
+  
+	pre {
+	  display: block;
+	  unicode-bidi: embed;
+	  font-family: monospace;
+	  white-space: pre-wrap;
+	  word-wrap: break-word;
+	  line-height: 1.5;
+	  word-break: break-all;
+	  padding: .5em;
+	  margin: 0;
+	}
 
 `
