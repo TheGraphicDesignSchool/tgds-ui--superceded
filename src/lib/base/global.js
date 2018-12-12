@@ -1,8 +1,4 @@
 import { css } from 'styled-components';
-import remcalc from '../utils/remcalc';
-
-// @import url('${theme.font.href()}');
-// @import url('${theme.monoFont.href()}');
 
 export default ({ theme }) => css`
 
@@ -52,4 +48,5 @@ export default ({ theme }) => css`
   }
   
   //* { outline: 1px solid rgba(0, 0, 0, 0.1); }
+  
 `;
