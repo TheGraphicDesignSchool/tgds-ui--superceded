@@ -48,7 +48,8 @@
     "rollup-plugin-node-resolve": "^3.4.0",
     "rollup-plugin-terser": "^3.0.0",
     "styled-components": "^4.1.1",
-    "styled-is": "^1.1.5"
+    "styled-is": "^1.1.5",
+    "tgds-lib-builder": "file:../tgds-lib-builder"
   },
   "peerDependencies": {
     "react": "^16.7.0-alpha.2",
