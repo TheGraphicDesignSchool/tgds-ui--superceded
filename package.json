@@ -8,14 +8,18 @@
   "main": "index.js",
   "scripts": {
     "start": "react-scripts start",
-    "build": "yarn tgds-lib-build && cp ./package.json ./dist/package.json",
-    "watch": "nodemon scripts/build.js --ignore ./dist/",
+    "build": "yarn tgds-lib-build",
+    "watch": "yarn tgds-lib-watch",
     "test": "jest --no-cache",
     "prepublish": "rm -rf ./dist && npm run build",
     "pub": "cd dist && npm publish --access public && cd ..",
     "start-styleguide": "npx styleguidist server",
     "build-styleguide": "npx styleguidist build",
     "dev": "node scripts/watch.js"
+  },
+  "localConfig": {
+    "src": "./src/lib",
+    "dist": "./dist"
   },
   "repository": {
     "type": "git",
@@ -40,7 +44,7 @@
     "react-styleguidist": "^8.0.6",
     "styled-components": "^4.1.1",
     "styled-is": "^1.1.5",
-    "tgds-lib-builder": "file:../tgds-lib-builder/"
+    "tgds-lib-builder": "../tgds-lib-builder/"
   },
   "peerDependencies": {
     "react": "^16.7.0-alpha.2",
