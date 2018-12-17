@@ -17,10 +17,6 @@
     "build-styleguide": "npx styleguidist build",
     "dev": "node scripts/watch.js"
   },
-  "localConfig": {
-    "src": "./src/lib",
-    "dist": "./dist"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TheGraphicDesignSchool/tgds-ui.git"
@@ -59,5 +55,20 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "localConfig": {
+    "src": "./src/lib",
+    "dist": "./dist",
+    "options": {
+      "external": [
+        "react",
+        "styled-components",
+        "react-splitter-layout2"
+      ],
+      "globals": {
+        "react": "React",
+        "styled-components": "styled"
+      }
+    }
+  }
 }
