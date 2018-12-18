@@ -8,6 +8,7 @@ export default props => {
     }
 
     const computedColor = props.color || props.style.color
+
     if (computedColor) {
         styleProp.color = computedColor
     }
