@@ -3,5 +3,6 @@ import remcalc from '../utils/remcalc';
 import {CBox} from "./containers";
 
 export default styled(CBox)`
-  border-bottom: 5px solid black;
+  border-bottom: 5px solid red;
+  
 `;
