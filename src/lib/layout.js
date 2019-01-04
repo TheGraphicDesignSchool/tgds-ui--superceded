@@ -13,7 +13,6 @@ export {
     SplitGrid
 }
 
-
 export const Motherfucker = () => {
 	const [hidden, setHidden] = useState(false)
 	const toggleHidden = () => { setHidden(!hidden) }
