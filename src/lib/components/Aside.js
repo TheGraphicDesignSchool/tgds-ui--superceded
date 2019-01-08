@@ -53,7 +53,6 @@ const AsideButton = styled(Button)`
 		`left: calc(100% - ${vars.icon.size});` :
 		`right: calc(100% - ${vars.icon.size});`
 	}
-	
 `
 
 export default props => {
@@ -71,5 +70,4 @@ export default props => {
 		</AsideStyle>
 	)
 }
-
 
