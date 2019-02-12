@@ -10,6 +10,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "build-lib": "yarn tgds-lib-build",
+    "build-force": "yarn add ../tgds-lib-builder -D && yarn tgds-lib-build",
     "watch": "yarn tgds-lib-watch",
     "test": "jest --no-cache",
     "prepublish": "rm -rf ./dist && npm run build",
@@ -31,18 +32,19 @@
   },
   "homepage": "https://github.com/TheGraphicDesignSchool/tgds-ui#readme",
   "devDependencies": {
+    "@babel/plugin-transform-named-capturing-groups-regex": "^7.3.0",
     "chalk": "^2.4.2",
     "glob": "^7.1.3",
     "mdx-loader": "^2.2.1",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
-    "react-scripts": "^2.1.3",
+    "react-scripts": "^2.1.4",
     "react-splitter-layout2": "^0.3.2",
     "react-styled-flexboxgrid": "^3.0.0",
     "react-styleguidist": "^8.0.6",
     "styled-components": "^4.1.1",
     "styled-is": "^1.1.5",
-    "tgds-lib-builder": "../tgds-lib-builder/"
+    "tgds-lib-builder": "../tgds-lib-builder"
   },
   "peerDependencies": {
     "react": "^16.7.0-alpha.2",
